@@ -28,7 +28,7 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
+    // await client.connect();
 
     const roomsCollection = client.db("airbnbTask").collection("rooms");
 
@@ -64,7 +64,7 @@ async function run() {
         res.send(result);
       }
     });
-    app.get("/rooms", async (req, res) => {});
+    
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
