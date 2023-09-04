@@ -62,7 +62,7 @@ async function run() {
       if (query) {
         const result = await roomsCollection.find(filter).toArray();
         res.send(result);
-      } 
+      }
     });
     app.get("/rooms", async (req, res) => {});
 
